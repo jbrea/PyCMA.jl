@@ -12,3 +12,17 @@
 [![Documentation](https://img.shields.io/badge/docs-stable-blue.svg)](https://jbrea.github.io/PyCMA.jl/stable)
 [![Documentation](https://img.shields.io/badge/docs-master-blue.svg)](https://jbrea.github.io/PyCMA.jl/dev)
 -->
+
+A tiny Julia wrapper of [pycma](https://github.com/CMA-ES/pycma).
+Install in a julia repl with
+```julia
+]add https://github.com/jbrea/PyCMA.jl
+```
+
+```@example
+using PyCMA
+f(x) = sum(abs2, x)
+PyCMA.cma.fmin(f, ones(10), .25)
+?PyCMA.cma
+?PyCMA.cma.fmin
+```
